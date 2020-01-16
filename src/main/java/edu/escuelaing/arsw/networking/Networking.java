@@ -3,6 +3,7 @@ package edu.escuelaing.arsw.networking;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.*;
 
 public class Networking {
@@ -15,6 +16,12 @@ public class Networking {
     }
 
     public static void main(String[] args) throws Exception {
+
+        leerUrl();
+        
+    }
+
+    public void leerDatosDeInternet() throws MalformedURLException, IOException {
         URL google = new URL("http://www.google.com/");
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(google.openStream()));
@@ -25,7 +32,15 @@ public class Networking {
             System.out.println();
         }
     }
-    
+
+    public static void leerUrl() {
+
+        System.out.println("Ingrese la URL:");
+        BufferedReader urlUsuario = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("la url Ingresada es: ");
+        System.out.println(urlUsuario);
+        PrintWriter prueba;
+    }
 
     public String getProtocol() {
         return personalSite.getProtocol();

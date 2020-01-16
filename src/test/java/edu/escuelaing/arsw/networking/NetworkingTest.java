@@ -1,5 +1,6 @@
 package edu.escuelaing.arsw.networking;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import org.junit.Test;
 
@@ -21,6 +22,17 @@ public class NetworkingTest {
         System.out.println(net.getRef() + "  Este es el Ref");
     }
     
+    @Test
+    public void deberiaLeerDatosDeInternet() throws MalformedURLException, IOException{
+        Networking net = new Networking();
+        net.leerDatosDeInternet();
+    }
+    
+    @Test
+    public void deberiaPedirLaUrl() throws MalformedURLException{
+        Networking net = new Networking();
+        net.leerUrl();
+    }
     
     
 }
